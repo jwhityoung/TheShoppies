@@ -1,21 +1,27 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import InputGroup from 'react-bootstrap/InputGroup';
+import './style.css'
 
-function Search(props){
+function Search(props) {
     return (
-            <Card>
-                <Card.Body>
-                    <h3>Movie Search</h3>
-                <form>
-                    <input 
-                        placeholder=""
-                        className="userInput" 
-                        name="search" 
-                        onChange={(e) => props.searchHandler(e.target.value)}
-                    />
-                </form>
-                </Card.Body>
-                </Card>
+        // <Card>
+        //     <Card.Body>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                            <InputGroup.Text id="basic-addon1" style={{background: "transparent"}}> <FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <input
+                            placeholder="Search for a movie to nominate"
+                            className="user-input"
+                            name="search"
+                            onChange={(e) => props.searchHandler(e.target.value)}
+                        /> 
+                    </InputGroup>
+                // </Card.Body>
+                // </Card>
     )
 }
 

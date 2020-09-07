@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '../Button';
+import Shoppies from '../../assets/Shoppies.png';
+import './style.css';
+import ListGroup from 'react-bootstrap/ListGroup'
 
 function Movie(props) {
     const [onRemove, setOnRemove] = useState('');
@@ -24,20 +27,21 @@ function Movie(props) {
     }, [onRemove])
 
     return (
-        <p className={`movie${props.added ? ' movie--added' : ''}${onRemove}`}>
-
-            <h4>{props.title}</h4>
-            <p>{props.year}</p>
-
-            <Button
-                nominationHandler={() => handleNomination(props.movie)}
-                class={props.class}
-                enabled={props.enabled}
-                movie={props.movie}
-                style={{float: 'right'}}
-            />
-
-        </p>
+        <div>
+            <p className={`movie${props.added ? ' movie--added' : ''}${onRemove}`}>
+                <div>
+                    <h4>{props.title}</h4>
+                    <p>{props.year}</p>
+                    <Button
+                        nominationHandler={() => handleNomination(props.movie)}
+                        class={props.class}
+                        enabled={props.enabled}
+                        movie={props.movie}
+                        style={{ float: 'right' }}
+                    />
+                </div>
+            </p>
+        </div>
     )
 
 }

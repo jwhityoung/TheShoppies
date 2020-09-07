@@ -9,7 +9,7 @@ function Button(props) {
             onClick={props.nominationHandler}
             className={"button custom-button" + props.class}
             disabled={!props.enabled}
-            style={{background: '#655353', border: 'none', color: '#EEF0F2'}}>
+            style={{background: '#0A0A0A', border: 'none', color: '#EEF0F2'}}>
                 {props.class}
         </BootstrapButton>
     )

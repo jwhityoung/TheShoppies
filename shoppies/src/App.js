@@ -8,6 +8,8 @@ import axios from 'axios';
  
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
+document.body.style.background = "#F7F7F3";
+
 class App extends React.Component {
 
 
@@ -18,6 +20,9 @@ class App extends React.Component {
     searching: false,
     added: false
   }
+  
+ 
+  
 
   handleSearch = (input) => {
     this.setState({search: input, searching: true})
@@ -88,7 +93,7 @@ class App extends React.Component {
         <Jumbo />
         <div className="container app-container">
           <div className="row">
-          <div className="col-md-8 movie-search">
+          <div className="col-md-5 movie-search">
         {this.state.nominations.length !== 5 
           ? <Search searchHandler={this.handleSearch}/>
           : <p nominees={this.state.nominations}/>

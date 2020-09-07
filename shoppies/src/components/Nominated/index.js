@@ -7,7 +7,8 @@ function Nominated(props){
     return (
         <Card>
             <Card.Body>
-            <h4 className="nominations-header">Nominations:</h4>
+            <h4 className="nominations-header">Nominations</h4>
+            <hr></hr>
             {!!props.nominations.length 
                 ? <ul className="nominations-list">
                     {props.nominations.map((movie, i) =>{
@@ -23,7 +24,7 @@ function Nominated(props){
                         />
                     })}
                 </ul>
-                : <h3 className="no-nominations">No nominations yet</h3>
+                : <h3 className="no-nominations" style={{color: '#A3A3A3', textAlign: 'center'}}>No nominations yet</h3>
             }
             </Card.Body>
       </Card>
