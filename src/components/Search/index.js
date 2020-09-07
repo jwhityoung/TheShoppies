@@ -7,8 +7,7 @@ import './style.css'
 
 function Search(props) {
     return (
-        // <Card>
-        //     <Card.Body>
+    
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
                             <InputGroup.Text id="basic-addon1" style={{background: "transparent"}}> <FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
@@ -20,8 +19,7 @@ function Search(props) {
                             onChange={(e) => props.searchHandler(e.target.value)}
                         /> 
                     </InputGroup>
-                // </Card.Body>
-                // </Card>
+            
     )
 }
 
