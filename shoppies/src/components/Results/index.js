@@ -1,7 +1,8 @@
 import React from 'react';
 import Movie from '../Movie';
 import Searching from '../Searching';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import './style.css';
 
 function Results(props){
     return (
@@ -10,7 +11,7 @@ function Results(props){
                <h4>Results</h4>
            
             {(!props.searchInProgress && !props.results.length)}
-            {!!props.results.length && <ul className="resultsList">
+            {!!props.results.length && <ul className="results-list">
                 {props.results.map(movie=>{
                     return <Movie 
                         poster={movie.Poster}
@@ -19,12 +20,12 @@ function Results(props){
                         key={movie.imdbID}
                         movie={movie}
                         nominationHandler={props.nominationHandler}
-                        class={'nominate'}
+                        class={'Nominate'}
                         enabled={movie.nominated || props.complete ? false : true}            
                     />
                 })}
             </ul>}
-            {(!props.results.length && props.searchInProgress) && <ul className="resultsList">
+            {(!props.results.length && props.searchInProgress) && <ul className="results-list">
                     <Searching />
                     <Searching />
                     <Searching />

@@ -1,14 +1,17 @@
 import React from 'react';
+import BootstrapButton from 'react-bootstrap/Button';
 
-function Button(props){
+
+
+function Button(props) {
     return (
-        <button 
+        <BootstrapButton
             onClick={props.nominationHandler}
-            className={"button " + props.class}
+            className={"button custom-button" + props.class}
             disabled={!props.enabled}
-        >
-            {props.class}
-        </button>
+            style={{background: '#655353', border: 'none', color: '#EEF0F2'}}>
+                {props.class}
+        </BootstrapButton>
     )
 }
 

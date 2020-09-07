@@ -9,6 +9,8 @@ import axios from 'axios';
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 class App extends React.Component {
+
+
   state = {
     search: '',
     results: [],
@@ -82,7 +84,7 @@ class App extends React.Component {
   
   render(){
     return (
-      <div className="App">
+      <div className="app">
         <Jumbo />
         <div className="container app-container">
           <div className="row">
