@@ -1,10 +1,12 @@
 import React from 'react';
 import Movie from '../Movie';
+import Card from 'react-bootstrap/Card'
 
 function Nominated(props){
     return (
-        <section className="nominated">
-            <h3 className="nominationsHeader">Nominations:</h3>
+        <Card>
+            <Card.Body>
+            <h4 className="nominationsHeader">Nominations:</h4>
             {!!props.nominations.length 
                 ? <ul className="nominationsList">
                     {props.nominations.map((movie, i) =>{
@@ -22,7 +24,8 @@ function Nominated(props){
                 </ul>
                 : <h3 className="nominations__empty">No nominations yet</h3>
             }
-        </section>
+            </Card.Body>
+      </Card>
     )
 }
 

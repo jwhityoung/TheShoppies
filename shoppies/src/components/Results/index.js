@@ -1,11 +1,14 @@
 import React from 'react';
 import Movie from '../Movie';
 import Searching from '../Searching';
+import Card from 'react-bootstrap/Card'
 
 function Results(props){
     return (
-        <section className="results">
-            <h4 className="resultsHeader">Results: </h4>
+        <Card>
+           <Card.Body>
+               <h4>Results</h4>
+           
             {(!props.searchInProgress && !props.results.length)}
             {!!props.results.length && <ul className="resultsList">
                 {props.results.map(movie=>{
@@ -26,7 +29,8 @@ function Results(props){
                     <Searching />
                     <Searching />
                 </ul>}
-        </section>
+                </Card.Body>
+                </Card>
     )
 }
 

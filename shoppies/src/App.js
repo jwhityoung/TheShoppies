@@ -3,6 +3,7 @@ import Search from './components/Search';
 import Jumbo from './components/Jumbotron';
 import Results from './components/Results';
 import Nominated from './components/Nominated';
+import './App.css'
 import axios from 'axios';
  
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
@@ -83,23 +84,33 @@ class App extends React.Component {
     return (
       <div className="App">
         <Jumbo />
+        <div className="container app-container">
+          <div className="row">
+          <div className="col-md-8 movie-search">
         {this.state.nominations.length !== 5 
           ? <Search searchHandler={this.handleSearch}/>
           : <p nominees={this.state.nominations}/>
         }
-        <main className="main">
+        </div>
+       </div>
+       <div className="row">
+       <div className="col-md-6">
           <Results 
             results={this.state.results}
             nominationHandler={this.addNomination} 
             complete={this.state.nominations.length === 5 ? true : false}
             searchInProgress={this.state.search ? true : false}
           />
+          </div>
+          <div className="col-md-6">
           <Nominated 
             nominations={this.state.nominations}
             nominationHandler={this.removeNomination}
             added={this.state.added}
           />
-        </main>
+          </div>
+          </div>
+        </div>
       </div>
     );
   }
