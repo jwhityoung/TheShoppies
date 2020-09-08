@@ -1,8 +1,6 @@
 import React from 'react';
 import BootstrapButton from 'react-bootstrap/Button';
 
-
-
 function Button(props) {
     return (
         <BootstrapButton

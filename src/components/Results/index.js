@@ -1,10 +1,7 @@
 import React from 'react';
 import Movie from '../Movie';
-import Searching from '../Searching';
 import Card from 'react-bootstrap/Card';
 import './style.css';
-import Search from '../Search'
-
 
 function Results(props){
  return (
@@ -16,7 +13,6 @@ function Results(props){
             <h5 style={{color: '#A3A3A3', textAlign: 'center'}}>Search a movie to nominate</h5>
             }
             {!!props.results.length && <ul className="results-list">
-
                 {props.results.map(movie=>{
                     return <Movie 
                     poster={movie.Poster}
@@ -27,17 +23,9 @@ function Results(props){
                         nominationHandler={props.nominationHandler}
                         class={'Nominate'}
                         enabled={movie.nominated || props.complete ? false : true}            
-                    />
-                    
+                    />        
                 })}
-            
             </ul>}
-            {(!props.results.length && props.searchInProgress) && <ul className="results-list">
-                    <Searching />
-                    <Searching />
-                    <Searching />
-                </ul>}
-               
                 </Card.Body>
                 </Card>
     )
