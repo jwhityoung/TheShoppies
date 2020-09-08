@@ -6,10 +6,11 @@ import BootstrapButton from 'react-bootstrap/Button';
 function Button(props) {
     return (
         <BootstrapButton
+        size="sm"
             onClick={props.nominationHandler}
             className={"button custom-button" + props.class}
             disabled={!props.enabled}
-            style={{background: '#0A0A0A', border: 'none', color: '#EEF0F2'}}>
+            style={{background: '#FCA311', border: 'none', color: '#0A0A0A'}}>
                 {props.class}
         </BootstrapButton>
     )

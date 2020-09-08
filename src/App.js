@@ -5,10 +5,11 @@ import Results from './components/Results';
 import Nominated from './components/Nominated';
 import './App.css'
 import axios from 'axios';
+import Banner from './components/Banner'
  
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
-document.body.style.background = "#F7F7F3";
+document.body.style.background = "#E5E5E5";
 
 class App extends React.Component {
 
@@ -96,7 +97,7 @@ class App extends React.Component {
           <div className="col-md-5 movie-search">
         {this.state.nominations.length !== 5 
           ? <Search searchHandler={this.handleSearch}/>
-          : <p nominees={this.state.nominations}/>
+          : <Banner nominees={this.state.nominations}/>
         }
         </div>
        </div>

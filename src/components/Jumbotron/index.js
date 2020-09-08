@@ -5,7 +5,7 @@ import './style.css';
 
 const Jumbo = () => {
   return (
-<Jumbotron fluid className="jumbotron" style={{backgroundColor: '#AD343E'}}>
+<Jumbotron fluid className="jumbotron" style={{backgroundColor: '#14213D'}}>
   <Container className="jumbotron-container">
     <img src={Shoppies} alt="The Shoppies" />
   </Container>

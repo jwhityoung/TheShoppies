@@ -7,19 +7,20 @@ import './style.css'
 
 function Search(props) {
     return (
-    
+   
+           
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
-                            <InputGroup.Text id="basic-addon1" style={{background: "transparent"}}> <FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
+                            {/* <InputGroup.Text id="basic-addon1" style={{background: "#F5F5F5"}}> <FontAwesomeIcon icon={faSearch} /></InputGroup.Text> */}
                         </InputGroup.Prepend>
                         <input
-                            placeholder="Search for a movie to nominate"
+                            placeholder="Start typing movie title.."
                             className="user-input"
                             name="search"
                             onChange={(e) => props.searchHandler(e.target.value)}
                         /> 
                     </InputGroup>
-            
+                
     )
 }
 
