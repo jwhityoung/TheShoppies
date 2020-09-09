@@ -18,6 +18,7 @@ function Search(props) {
                             className="user-input"
                             name="search"
                             onChange={(e) => props.searchHandler(e.target.value)}
+                            style={{backgroundColor: '#F5F5F5'}}
                         /> 
                     </InputGroup>
                 
