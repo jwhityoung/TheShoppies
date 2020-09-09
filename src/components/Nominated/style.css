@@ -2,3 +2,9 @@
     text-align: center;
     color: #A3A3A3;
 }
+
+@media screen and (max-width: 768px) {
+    .nominations-card {
+        margin-bottom: 20px;
+    }
+}

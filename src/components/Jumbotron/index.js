@@ -7,7 +7,7 @@ const Jumbo = () => {
   return (
 <Jumbotron fluid className="jumbotron" style={{backgroundColor: '#14213D'}}>
   <Container className="jumbotron-container">
-    <img src={Shoppies} alt="The Shoppies" />
+    <img className="logo" src={Shoppies} alt="The Shoppies" />
   </Container>
 </Jumbotron>
   );

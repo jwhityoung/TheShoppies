@@ -13,7 +13,6 @@ document.body.style.background = "#E5E5E5";
 
 class App extends React.Component {
 
-
   state = {
     search: '',
     results: [],
@@ -21,14 +20,13 @@ class App extends React.Component {
     searching: false,
     added: false
   }
-  
- 
-  
 
+  // Movie Search
   handleSearch = (input) => {
     this.setState({search: input, searching: true})
   }
 
+  // Adding Nomination
   addNomination = (movie) => {
     let currentResults = this.state.results.map(result => {
       if(movie.imdbID === result.imdbID){
@@ -44,6 +42,7 @@ class App extends React.Component {
     }, () => localStorage.setItem("nominations", JSON.stringify(this.state.nominations)))
   }
 
+  //Removing Nomination
   removeNomination = (movie) => {
     let currentResults = this.state.results.map(result => {
       if(movie.imdbID === result.imdbID){

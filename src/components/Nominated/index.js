@@ -5,7 +5,7 @@ import './style.css';
 
 function Nominated(props){
     return (
-        <Card style={{backgroundColor: '#F5F5F5'}}>
+        <Card className="nominations-card" style={{backgroundColor: '#F5F5F5'}}>
             <Card.Body>
             <h4 className="nominations-header">Nominations</h4>
             <hr></hr>
