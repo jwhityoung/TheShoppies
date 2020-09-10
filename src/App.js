@@ -82,7 +82,7 @@ class App extends React.Component {
             this.setState({results: this.updateNominatedResults(movies.data.Search), searching: false})
           }
         })
-        .catch(err => console.log(`Unable to fetch movies: ${err}`))
+        .catch(err => console.log(`Unable to load movies: ${err}`))
       }
     }
   }
