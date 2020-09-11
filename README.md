@@ -9,7 +9,7 @@
   <h3 align="center">The Shoppies</h3>
 
   <p align="center">
-   Shopify has branched out into movie award shows. The Shoppies app allows users to serach for movies and nominate up to five for the upcoming Shoppies.
+   Shopify has branched out into movie award shows. The Shoppies app allows users to search for movies and nominate up to five for the upcoming Shoppies.
     <br />
 
   </p>
@@ -60,7 +60,7 @@ git clone https://github.com/jwhityoung/TheShoppies
 ```sh
 npm install
 ```
-3. Create .env file with you OMDB API Key
+3. Create .env file with your OMDB API Key
 ```sh
 REACT_APP_OMDB_API_KEY=Your API Key
 ```

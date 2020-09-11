@@ -7,8 +7,8 @@ import './App.css'
 import axios from 'axios';
 import Banner from './components/Banner'
  
-// const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
-require('dotenv').config();
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+
 
 document.body.style.background = "#E5E5E5";
 
@@ -77,7 +77,7 @@ class App extends React.Component {
       if(this.state.search===''){
         this.setState({results: [], searching: false})
       } else {
-        axios.get(`https://www.omdbapi.com/?s=${this.state.search}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
+        axios.get(`https://www.omdbapi.com/?s=${this.state.search}&apikey=${API_KEY}`)
         .then(movies => {
           if(movies.data.Search){
             this.setState({results: this.updateNominatedResults(movies.data.Search), searching: false})
